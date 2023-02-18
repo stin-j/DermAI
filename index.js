@@ -1,3 +1,4 @@
+
 //requesting permission to access location
 if (navigator.permissions) {
     navigator.permissions.query({ name: 'geolocation' }).then(permission => {
@@ -26,6 +27,7 @@ function successCallback(position) {
     const longitude = position.coords.longitude;
 
     // use the latitude and longitude data
+    console.log(`Latitude: ${latitude} °, Longitude: ${longitude} °`);
 }
 
 //handle errors
