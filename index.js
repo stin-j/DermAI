@@ -27,8 +27,8 @@ if (navigator.permissions) {
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 function successCallback(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
 
     // use the latitude and longitude data
     console.log("Latitude: "+latitude+", Longitude: "+longitude);
@@ -42,15 +42,21 @@ function errorCallback(error) {
     locationError = true;
     console.error("Error getting location data: ${error.message}");
     //code to display error message to user on web page
-
-
+    alert(errorMessage);
 }
 
 
 function initMap() {
     // Create a new map instance
+
     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: latitude, lng: longitude },
         zoom: 10
     });
+
+    var marker = new google.maps.Marker({
+        position: {lat: latitude, lng: longitude},
+        map: map,
+        title: 'Current Location'
+      });
 }
