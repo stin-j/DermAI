@@ -1,16 +1,30 @@
 {
-
-    "diseases" : {
-        "category" : {
-            "skin cancers" : {
-
-            },
-            "vascular tumors" : {
-                
-            }
+    "diseases": {
+        
+        "Skin cancer" :{
+            "image" : "images/ss.jpg",
+            "paragraph" : "Skin cancer is a type of cancer that develops when abnormal skin cells grow uncontrollably and form a malignant tumor. It is one of the most common types of cancer in the world and is typically caused by exposure to ultraviolet (UV) radiation from the sun or other sources such as tanning beds.",
+            "link for more info" : "https://www.cancer.org/cancer/melanoma-skin-cancer.html"
             
+        },
+        "Acne/Rosacea" :{
+            "images": "",
+            "paragraph" : "", 
+            "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
 
-        } 
+        },
+        "Psoriasis" :{
+            "images": "",
+            "paragraph" : "", 
+            "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+
+        },
+        "Warts Molluscum and other Viral Infections" :{
+            "images" : "", 
+            "paragraph" : " ", 
+            "Link for more information" : "https://www.yalemedicine.org/conditions/viral-warts "
+        }
+
 
     }
 }
