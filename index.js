@@ -57,8 +57,16 @@ function initMap() {
     });
 
     //marker for current location
+    var customIcon = {
+        url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png', // URL of the custom icon image
+        size: new google.maps.Size(32, 32), // Size of the custom icon image
+        origin: new google.maps.Point(0, 0), // Position of the custom icon image relative to the top-left corner of the icon image
+        anchor: new google.maps.Point(16, 32) // Position of the anchor point on the marker image (where the marker's position is located relative to the icon)
+      };
+
     var marker = new google.maps.Marker({
         position: { lat: latitude, lng: longitude },
+        icon: customIcon,
         map: map,
         title: 'Current Location'
     });
@@ -101,7 +109,7 @@ function initMap() {
 function changeRadius() {
     var numTest = parseInt(document.getElementById("radius").value);
     if (Number.isInteger(numTest)) {
-        radius = document.getElementById("radius").value * 1000;
+        radius = document.getElementById("radius").value * 621.371;
         initMap();
     } else {
         alert("Input is not an integer");
