@@ -2,6 +2,7 @@ window.addEventListener('load', initMap);
 
 
 var latitude = 0, longitude = 0;
+var radius = 5000;
 var locationError = false;
 const errorMessage = "Unable to retrieve your location. Please try again later.";
 
@@ -54,7 +55,7 @@ function initMap() {
         center: center,
         zoom: 10
     });
-    
+
     //marker for current location
     var marker = new google.maps.Marker({
         position: { lat: latitude, lng: longitude },
@@ -68,7 +69,7 @@ function initMap() {
     // Define the search query parameters
     var request = {
         location: center,
-        radius: '5000', // Search within 5 km radius
+        radius: radius, // Search within 5 km radius
         query: 'skin dermatologists'
     };
 
@@ -92,6 +93,18 @@ function initMap() {
             position: place.geometry.location,
             title: place.name
         });
+    }
+
+}
+
+//function to change the radius of the search and then call the initMap function
+function changeRadius() {
+    var numTest = parseInt(document.getElementById("radius").value);
+    if (Number.isInteger(numTest)) {
+        radius = document.getElementById("radius").value * 1000;
+        initMap();
+    } else {
+        alert("Input is not an integer");
     }
 
 }

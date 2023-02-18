@@ -8,7 +8,10 @@
 
 <body onload="">
     <h1>DermAI</h1>
-    <button onclick="">Give Current Location</button>
+    <h2>Find a Dermatologist</h2>
+    <!--input field to change radius of search-->
+    <input type="text" id="radius" placeholder="Radius (km)">
+    <button onclick="changeRadius()">Search</button>
     <p id="demo">location</p>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA5RDpdew7bpNOC6G64xMOB6Pbk8xbuSU&callback=initMap&libraries=places"
