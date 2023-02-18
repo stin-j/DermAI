@@ -27,13 +27,16 @@ function successCallback(position) {
     const longitude = position.coords.longitude;
 
     // use the latitude and longitude data
-    console.log(`Latitude: ${latitude} °, Longitude: ${longitude} °`);
+    console.log("Latitude: ${latitude} °, Longitude: ${longitude} °");
+    var x = document.getElementById("demo");
+    x.innerHTML = "Latitude: " + latitude + " Longitude: " + longitude;
+    
 }
 
 //handle errors
 function errorCallback(error) {
     locationError = true;
-    console.error(`Error getting location data: ${error.message}`);
+    console.error("Error getting location data: ${error.message}");
     //code to display error message to user on web page
     
 
