@@ -1,21 +1,16 @@
 {
-    "diseases": {
-        "Skin cancer" :{
-            "image" : "images/ss.jpg",
-            "paragraph" : " asdasdf",
-            "link for more info" : "https://www.cancer.org/cancer/melanoma-skin-cancer.html"
+
+    "diseases" : {
+        "category" : {
+            "skin cancers" : {
+
+            },
+            "vascular tumors" : {
+                
+            }
             
-        },
-        "Acne/Rosacea" :{
 
-        },
-        "Psoriasis" :{
-
-        },
-        "Warts Molluscum and other Viral Infections" :{
-
-        }
-
+        } 
 
     }
 }
