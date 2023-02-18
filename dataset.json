@@ -1,187 +1,155 @@
 {
     "diseases": {
-       "Categories" :{
-
-            "Melanoma Skin Cancer Nevi and Moles" : { 
-                "Atypical Nevi" : 
-                {
+        "Categories": {
+            "Melanoma Skin Cancer Nevi and Moles": {
+                "Atypical Nevi": {
                     "images": "images/AtypicalNevi.jpg",
-                    "paragraph" : "Atypical nevi, also known as dysplastic nevi, are moles that look different from regular moles in terms of size, color, shape, and texture. They are generally larger and have irregular borders, which can make them difficult to distinguish from melanoma, a serious form of skin cancer.Atypical nevi can occur anywhere on the body, but they are most commonly found on the trunk and upper extremities. They are more common in individuals with fair skin and those who have a family history of atypical nevi or melanoma.Most atypical nevi are benign and do not pose a significant health risk. However, people with many atypical nevi may be at increased risk of developing melanoma. Therefore, it is important to monitor atypical nevi and have them evaluated by a dermatologist regularly.In some cases, atypical nevi may need to be removed to reduce the risk of developing melanoma. This is typically recommended if the nevus shows signs of changes, such as growth or changes in color, texture or shape.ndividuals with atypical nevi should take precautions to reduce their risk of developing melanoma, including avoiding excessive sun exposure and using sunscreen with a high SPF, wearing protective clothing, and avoiding tanning beds. They should also undergo regular skin checks by a dermatologist and monitor their skin for any changes or abnormalities.", 
-                    "link for more info" : "https:atypicalnevi.com"
-                }, 
-                "Atypical Nevi Truck" : 
-                {
+                    "paragraph": "Atypical nevi, also known as dysplastic nevi, are moles that look different from regular moles in terms of size, color, shape, and texture. They are generally larger and have irregular borders, which can make them difficult to distinguish from melanoma, a serious form of skin cancer.Atypical nevi can occur anywhere on the body, but they are most commonly found on the trunk and upper extremities. They are more common in individuals with fair skin and those who have a family history of atypical nevi or melanoma.Most atypical nevi are benign and do not pose a significant health risk. However, people with many atypical nevi may be at increased risk of developing melanoma. Therefore, it is important to monitor atypical nevi and have them evaluated by a dermatologist regularly.In some cases, atypical nevi may need to be removed to reduce the risk of developing melanoma. This is typically recommended if the nevus shows signs of changes, such as growth or changes in color, texture or shape.ndividuals with atypical nevi should take precautions to reduce their risk of developing melanoma, including avoiding excessive sun exposure and using sunscreen with a high SPF, wearing protective clothing, and avoiding tanning beds. They should also undergo regular skin checks by a dermatologist and monitor their skin for any changes or abnormalities.",
+                    "link for more info": "https:atypicalnevi.com"
+                },
+                "Atypical Nevi Truck": {
                     "images": " images/AtypicalNeviTruck.jpg",
-                    "paragraph" : "Atypical nevi on the trunk are moles that are located on the torso of the body and display features that make them different from regular moles. These moles are often larger and have irregular borders, asymmetrical shape, and different colors or shades. They may also be raised, bumpy, or have a rough surface. Atypical nevi on the trunk are often categorized as dysplastic nevi, which are moles that have abnormal or unusual features but are usually benign. However, people with many atypical nevi, particularly those on the trunk, are at higher risk of developing melanoma, a more serious form of skin cancer. Individuals with atypical nevi on the trunk should have their skin examined regularly by a dermatologist to monitor for any changes or signs of skin cancer. The dermatologist may recommend that any suspicious nevi be removed and sent for biopsy. Preventive measures, such as avoiding excessive sun exposure, using sunscreen with a high SPF, wearing protective clothing, and avoiding tanning beds, can help reduce the risk of developing melanoma. Individuals with many atypical nevi may also need to be more vigilant about monitoring their skin and may need to undergo more frequent skin checks. It is important to note that not all atypical nevi on the trunk will develop into melanoma, and many can be safely monitored without intervention. However, it is essential to have a dermatologist evaluate any suspicious moles and to take steps to reduce the risk of developing skin cancer.",
-                    "Link for more info" : "https:atypicalnevitruck.com"
-                }, 
-                "Becker Nevus" : 
-                {
+                    "paragraph": "Atypical nevi on the trunk are moles that are located on the torso of the body and display features that make them different from regular moles. These moles are often larger and have irregular borders, asymmetrical shape, and different colors or shades. They may also be raised, bumpy, or have a rough surface. Atypical nevi on the trunk are often categorized as dysplastic nevi, which are moles that have abnormal or unusual features but are usually benign. However, people with many atypical nevi, particularly those on the trunk, are at higher risk of developing melanoma, a more serious form of skin cancer. Individuals with atypical nevi on the trunk should have their skin examined regularly by a dermatologist to monitor for any changes or signs of skin cancer. The dermatologist may recommend that any suspicious nevi be removed and sent for biopsy. Preventive measures, such as avoiding excessive sun exposure, using sunscreen with a high SPF, wearing protective clothing, and avoiding tanning beds, can help reduce the risk of developing melanoma. Individuals with many atypical nevi may also need to be more vigilant about monitoring their skin and may need to undergo more frequent skin checks. It is important to note that not all atypical nevi on the trunk will develop into melanoma, and many can be safely monitored without intervention. However, it is essential to have a dermatologist evaluate any suspicious moles and to take steps to reduce the risk of developing skin cancer.",
+                    "Link for more info": "https:atypicalnevitruck.com"
+                },
+                "Becker Nevus": {
                     "images": "images/BeckerNevus.jpg",
-                    "paragraph" : "Becker nevus is a benign skin lesion that is usually present at birth or develops during puberty. It is more commonly found in males than females and appears as a unilateral, pigmented patch that typically occurs on the shoulder, upper arm, or upper back.Becker nevus usually appears as a large, irregularly shaped patch of skin with a light brown or tan color, and it may have hair growth in the affected area. The color of the nevus may darken with sun exposure or hormonal changes, such as during puberty or pregnancy. In some cases, the nevus may be itchy or sensitive to touch.Becker nevus is considered a benign condition, which means that it is not cancerous and does not pose a significant health risk. However, the appearance of the nevus can cause cosmetic concern, especially in cases where the nevus is large and noticeable.Treatment for Becker nevus is usually not necessary, but it may be considered in cases where the nevus is causing cosmetic concerns or discomfort. Treatments may include laser therapy to reduce the pigmentation or hair growth, topical medications, or surgical removal of the nevus. However, it is important to note that the surgical removal of Becker nevus may result in scarring.If you notice any changes in the appearance of a Becker nevus, such as rapid growth, changes in color or shape, or bleeding, it is important to seek medical attention, as these may be signs of skin cancer or another serious skin condition.", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Blue Nevus" : 
-                {
+                    "paragraph": "Becker nevus is a benign skin lesion that is usually present at birth or develops during puberty. It is more commonly found in males than females and appears as a unilateral, pigmented patch that typically occurs on the shoulder, upper arm, or upper back.Becker nevus usually appears as a large, irregularly shaped patch of skin with a light brown or tan color, and it may have hair growth in the affected area. The color of the nevus may darken with sun exposure or hormonal changes, such as during puberty or pregnancy. In some cases, the nevus may be itchy or sensitive to touch.Becker nevus is considered a benign condition, which means that it is not cancerous and does not pose a significant health risk. However, the appearance of the nevus can cause cosmetic concern, especially in cases where the nevus is large and noticeable.Treatment for Becker nevus is usually not necessary, but it may be considered in cases where the nevus is causing cosmetic concerns or discomfort. Treatments may include laser therapy to reduce the pigmentation or hair growth, topical medications, or surgical removal of the nevus. However, it is important to note that the surgical removal of Becker nevus may result in scarring.If you notice any changes in the appearance of a Becker nevus, such as rapid growth, changes in color or shape, or bleeding, it is important to seek medical attention, as these may be signs of skin cancer or another serious skin condition.",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Blue Nevus": {
                     "images": "images/bluenevus.jpg",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Congenital Nevus" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Congenital Nevus": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Halo Nevus" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Halo Nevus": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Lentigo Maligna" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Lentigo Maligna": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Malignant Melanoma " : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Malignant Melanoma ": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Melanocytic Nevi" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Melanocytic Nevi": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Melanotic Macule" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Melanotic Macule": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Mongolian Spot" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Mongolian Spot": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Nevus Repigmented" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Nevus Repigmented": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Nevus Spilus" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Nevus Spilus": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
                 }
-            
-            }, 
-
-            "Vascular Tumor" : {
-                "AngioKeratomas" : 
-                {
+            },
+            "Vascular Tumor": {
+                "AngioKeratomas": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Cherry Angioma" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Cherry Angioma": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Hemangioma" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Hemangioma": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Hemangioma Dermoscopy" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Hemangioma Dermoscopy": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Hemangioma Infancy" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Hemangioma Infancy": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Kaposi Sarcoma" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Kaposi Sarcoma": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Lymphangioma Circumscriptum" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Lymphangioma Circumscriptum": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Purpura Vomiting" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Purpura Vomiting": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Pyogenic Granyloma" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Pyogenic Granyloma": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Spider Angioma" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Spider Angioma": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Thrombosed Vien" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Thrombosed Vien": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Unilateral Telangiectasia" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Unilateral Telangiectasia": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Vascular Anomaly" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Vascular Anomaly": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Venous Lake" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Venous Lake": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Venous Malformations" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Venous Malformations": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
-                }, 
-                "Telangiectasias" : 
-                {
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                },
+                "Telangiectasias": {
                     "images": "",
-                    "paragraph" : "", 
-                    "link for more info" : "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
+                    "paragraph": "",
+                    "link for more info": "https://www.aad.org/public/diseases/rosacea/treatment/acne-like"
                 }
             }
-
+        }
     }
 }
