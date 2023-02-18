@@ -31,7 +31,7 @@ function successCallback(position) {
     longitude = position.coords.longitude;
 
     // use the latitude and longitude data
-    console.log("Latitude: "+latitude+", Longitude: "+longitude);
+    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
     var x = document.getElementById("demo");
     x.innerHTML = "Latitude: " + latitude + " Longitude: " + longitude;
     initMap();
@@ -45,18 +45,53 @@ function errorCallback(error) {
     alert(errorMessage);
 }
 
-
+//init map function
 function initMap() {
     // Create a new map instance
+    var center = new google.maps.LatLng(latitude, longitude);
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: latitude, lng: longitude },
+        center: center,
         zoom: 10
     });
-
+    
+    //marker for current location
     var marker = new google.maps.Marker({
-        position: {lat: latitude, lng: longitude},
+        position: { lat: latitude, lng: longitude },
         map: map,
         title: 'Current Location'
-      });
+    });
+
+    // Create a new Places Service instance
+    var service = new google.maps.places.PlacesService(map);
+
+    // Define the search query parameters
+    var request = {
+        location: center,
+        radius: '5000', // Search within 5 km radius
+        query: 'skin dermatologists'
+    };
+
+    // Send the search request
+    service.textSearch(request, callback);
+
+    // Define the callback function
+    function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            // Loop through the results and create a marker for each one
+            for (var i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+            }
+        }
+    }
+
+    // Create a marker for a place
+    function createMarker(place) {
+        var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location,
+            title: place.name
+        });
+    }
+
 }
