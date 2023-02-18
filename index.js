@@ -1,3 +1,5 @@
+var locationError = false;
+const errorMessage = "Unable to retrieve your location. Please try again later.";
 
 //requesting permission to access location
 if (navigator.permissions) {
@@ -5,14 +7,12 @@ if (navigator.permissions) {
         if (permission.state === 'granted') {
             // permission granted, call getCurrentPosition()
             navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-            console.log("permission granted");
         } else if (permission.state === 'prompt') {
             //permission not granted, prompt the user to allow location access
-            alert("User denied the request for location access.");
-
+            alert("Please allow location access.");
         } else {
             // permission denied
-            alert("User denied the request for location access.");
+            console.log("User denied the request for location access.");
         }
     });
 } else {
@@ -32,9 +32,9 @@ function successCallback(position) {
 
 //handle errors
 function errorCallback(error) {
-    const errorMessage = "Unable to retrieve your location. Please try again later.";
+    locationError = true;
     console.error(`Error getting location data: ${error.message}`);
     //code to display error message to user on web page
-    alert(errorMessage);
+    
 
 }
