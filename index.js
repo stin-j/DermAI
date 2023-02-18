@@ -1,20 +1,37 @@
-//script to convert the address to lat and long
-var geocoder = require('geocoder');
-//take address from index.html input "address"
-var address = document.getElementById("address").value;
-var lat, long;
-geocoder.geocode(address, function ( err, data ) {
-    console.log(data.results[0].geometry.location.lat);
-    //save the lat and long as variables
-    lat = data.results[0].geometry.location.lat;
-    long = data.results[0].geometry.location.lng;
+if (navigator.permissions) {
+    navigator.permissions.query({ name: 'geolocation' }).then(permission => {
+        if (permission.state === 'granted') {
+            // permission granted, call getCurrentPosition()
+
+        } else if (permission.state === 'prompt') {
+            // permission not granted, prompt the user to allow location access
+
+
+        } else {
+            // permission denied
+
+        }
+    });
+} else {
+    // navigator.permissions not supported, call getCurrentPosition()
+}
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+function successCallback(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    // use the latitude and longitude data
+}
+
+function errorCallback(error) {
+    console.error(`Error getting location data: ${error.message}`);
+}
+
+function errorCallback(error) {
+    const errorMessage = "Unable to retrieve your location. Please try again later.";
+    console.error(`Error getting location data: ${error.message}`);
+    // display error message to user
     
-    }
-);
-//script to convert the lat and long to address
-var geocoder = require('geocoder');
-var latlng = "40.714224,-73.961452";
-geocoder.reverseGeocode( latlng, function ( err, data ) {
-    // do something with data
-    }
-);
+}
