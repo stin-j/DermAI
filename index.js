@@ -14,7 +14,7 @@ if (navigator.permissions) {
             navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
         } else if (permission.state === 'prompt') {
             //permission not granted, prompt the user to allow location access
-            alert("Please allow location access.");
+            //alert("Please allow location access.");
         } else {
             // permission denied
             console.log("User denied the request for location access.");
