@@ -24,21 +24,21 @@
         </div>
 
         <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="imageUpload" class="btn">Choose an image to upload</label>
+            <label for="imageUpload" class="button">Choose an image to upload</label>
             <br>
         </form>
     </div>
 
 
     <div class="container">
-        <h1>Find a Dermatologist</h1>
+        <h1 class="heading">Find a Dermatologist</h1>
         <div class="search"> <!--search bar-->
             <input type="text" id="radius" placeholder="Radius">
             <select name="units" id="units">
                 <option value="miles">Miles</option>
                 <option value="kilometers">Kilometers</option>
             </select>
-            <button onclick="changeRadius()" class="btn" style="margin-left: 10px">Search</button>
+            <button onclick="changeRadius()" class="button" style="margin-left: 10px">Search</button>
         </div>
         <!--<p id="demo">location</p>-->
         <div id="map"></div>

@@ -6,6 +6,7 @@ body {
 
 .container {
     max-width: 1200px;
+    text-align: center;
     margin: 100px auto;
     padding: 20px;
     background-color: #1d1a1a;
@@ -71,6 +72,29 @@ span {
     color: #2596be;
 }
 
+.button {
+    display:inline-block;
+    text-align: center;
+    width: auto;
+    margin: 5px auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00bfff; /* Set the background color to light blue */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 191, 255, 0.5); /* Create an inside glow effect */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #ffffff; /* Change the background color on hover for a subtle effect */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.7); /* Adjust the glow effect on hover */
+    color: #00bfff;
+  }
+
+  
 #map {
     height: 500px;
     width: 100%;
@@ -79,7 +103,7 @@ span {
 }
 
 .search {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     margin: 20px auto;
     text-align: center;
@@ -92,6 +116,22 @@ span {
     text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6;
     letter-spacing: 2px;
     /*text-transform: uppercase;*/
+}
+
+.heading {
+
+    font-family: 'Montserrat', sans-serif;
+    /* A popular futuristic font */
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff;
+    padding: 2rem 0;
+    border-top: 1px solid #00ffff;
+    border-bottom: 1px solid #00ffff;
+
+
 }
 
 .logo {

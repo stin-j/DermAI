@@ -116,7 +116,7 @@ function initMap() {
             // Loop through the results and create a marker for each one
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i], results, i);
-                
+
             }
         }
     }
@@ -128,7 +128,7 @@ function initMap() {
             map: map,
             position: place.geometry.location,
             title: place.name,
-            
+
         });
 
         // Create a new info window for each place
