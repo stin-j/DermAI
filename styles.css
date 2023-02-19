@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+    margin-top: 100px;
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -13,14 +14,27 @@ body {
     margin: 0 auto;
     
   }
+/*white rounded corners*/
+  .top-container{
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
 
 h1 {
     display: flex;
     font-size: 4rem;
     font-weight: 700;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     justify-content: center;
@@ -126,23 +140,18 @@ input {
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #000000;
-    /* Set the default text color to white gray */
     border: none;
     border-bottom: 2px solid #000000;
-    /* Set the bottom border to light blue */
     padding: 8px;
     background-color: transparent;
-    /* Make the background transparent */
 }
 
 input:focus {
     outline: none;
-    /* Remove the default focus outline */
 }
 
 input::placeholder {
     color: #696969;
-    /* Set the placeholder text color to white gray */
 }
 
 header {
@@ -155,23 +164,17 @@ header {
 
 .logo {
     display: flex;
-    /* use flexbox to position the logo and company name */
     align-items: center;
-    /* vertically center the content */
 }
 
 .logo img {
     height: 50px;
-    /* set the height of the logo */
     margin-right: 10px;
-    /* add some margin to the right of the logo */
 }
 
 .logo h1 {
     font-size: 24px;
-    /* set the font size of the company name */
     margin: 0;
-    /* remove any margin or padding */
 }
 
 /* creating a disclosure button format*/
@@ -249,6 +252,7 @@ details p {
   }
   
   #upload-image {
+    margin-left: 10px;
     background-color: #006eff;
     color: #fff;
     border: none;
@@ -257,11 +261,13 @@ details p {
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
+    border-radius: 20px;
   }
   
   #upload-image:hover {
-    background-color: #fff;
+    background-color: #e8e8e8;
     color: #00bfff;
   }
   
