@@ -240,7 +240,7 @@ details p {
   }
   
   .tabs a {
-    font-size: auto;
+    font-size: 20px;
     display: block;
     padding: 25px;
     text-align: center;
