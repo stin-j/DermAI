@@ -37,11 +37,6 @@ h2{
     max-width: 15ch;
 }
 
-@keyframes gradient-animation {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 0; }
-  }
-
 p {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -77,7 +72,7 @@ span{
 }
 
 #map {
-    height: 400px;
+    height: 500px;
     width: 100%;
     border: 2px solid white;
     border-radius: 5px;
@@ -89,3 +84,14 @@ span{
     margin: 20px auto;
     text-align: center;
 }
+
+.fancy-text {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 10rem; 
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6; /* Create a glowing effect with multiple shadows */
+    letter-spacing: 2px;
+    text-transform: uppercase; 
+  }
+  
+  
