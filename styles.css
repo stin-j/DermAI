@@ -248,3 +248,36 @@ details p {
     display: block;
   }
   
+  #upload-image {
+    background-color: #006eff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  #upload-image:hover {
+    background-color: #fff;
+    color: #00bfff;
+  }
+  
+  #upload-image::before {
+    content: "\25B2";
+    font-size: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    transform: translateY(-2px);
+  }
+  
+  #upload-image:hover::before {
+    content: "\25B2";
+    color: #00bfff;
+    margin-right: 5px;
+    display: inline-block;
+    transform: translateY(-2px);
+  }
+  
