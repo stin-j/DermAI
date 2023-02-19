@@ -10,6 +10,7 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    
   }
   
 
@@ -20,7 +21,7 @@ h1 {
     margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     justify-content: center;
     color: white;
 }
@@ -46,7 +47,6 @@ p {
     line-height: 2rem;
     margin-bottom: 20px;
     text-align: justify;
-    background: #333333;
 }
 
 span {
@@ -186,7 +186,11 @@ summary[role=button] {
 summary[role=button]:hover,
 summary[role=button]:focus,
 summary::marker {
-    color: #0f0
+    color: #ffffff
+}
+
+summary::marker::hover{
+    color: #004cff
 }
 
 details {
