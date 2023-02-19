@@ -11,7 +11,7 @@ body {
     margin: 100px auto;
     padding: 20px;
     background-color: #1d1a1a;
-    border: 5px solid #f39c12;
+    border: 5px solid #2596be;
     border-radius: 25px;
     box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #000000, 0 0 80px #000000, 0 0 90px #000000;
 }
@@ -57,7 +57,7 @@ span{
 }
 
 .btn {
-    background-color: #f39c12;
+    background-color: #2596be;
     border-radius: 5px;
     color: #ffffff;
     display: block;
@@ -74,7 +74,7 @@ span{
 
 .btn:hover {
     background-color: #ffffff;
-    color: #f39c12;
+    color: #2596be;
 }
 
 #map {
