@@ -17,13 +17,12 @@ body {
 
 /*white rounded corners*/
 .top-container {
-    margin-top: 100px;
     background-color: white;
     border-radius: 40px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    max-width: 450px;
-    margin: 0 auto;
+    max-width: 200px;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,6 +169,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    margin:10px;
 }
 
 .logo img {
@@ -212,15 +212,17 @@ details p {
 }
 
 .tab-container {
-    border-radius: 5px;
-    overflow: hidden;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    width:auto;
 }
 
 .tabs {
     list-style: none;
     margin: 0;
-    padding: 10px;
     display: flex;
+    padding: 5px;
 }
 
 .tabs li {
@@ -231,20 +233,26 @@ details p {
 .tabs a {
     font-size: 20px;
     display: block;
-    padding: 25px;
+    padding: 10px 20px;
+    margin: 5px;
     text-align: center;
     text-decoration: none;
-    color: #ffffff;
-    text-shadow: 0 0 10px #000000;
-    transition: text-shadow 0.1s ease-in-out;
+    color: #696969;
+    transition: background 0.3s ease-in;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
 
 }
 
 .tabs a:hover {
-    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff;
+    background: #006eff;
+    border-radius: 20px;
+    color: #000000;
 }
 
-.tab-content {}
+.tab-content {
+    
+}
 
 .tab-pane {
     display: none;
@@ -255,11 +263,10 @@ details p {
 }
 
 #upload-image {
-    margin-left: 10px;
     background-color: #006eff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 15px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
