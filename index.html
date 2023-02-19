@@ -27,7 +27,11 @@
     <div class="container">
         <h2>Find a Dermatologist</h2>
         <!--input field to change radius of search-->
-        <input type="text" id="radius" placeholder="Radius (miles)">
+        <input type="text" id="radius" placeholder="Radius">
+        <select name="units" id="units">
+            <option value="miles">Miles</option>
+            <option value="kilometers">Kilometers</option>
+        </select>
         <button onclick="changeRadius()" class = "btn">Search</button>
         <p id="demo">location</p>
         <div id="map"></div>

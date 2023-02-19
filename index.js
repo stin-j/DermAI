@@ -116,7 +116,18 @@ function initMap() {
             // Loop through the results and create a marker for each one
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
-                
+                // Create a new info window for each place
+                var infowindow = new google.maps.InfoWindow({
+                    content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].vicinity + '</p></div>'
+                });
+
+                // Add event listeners to show and hide info window
+                marker.addListener('mouseover', function () {
+                    infowindow.open(map, this);
+                });
+                marker.addListener('mouseout', function () {
+                    infowindow.close();
+                });
             }
         }
     }
@@ -128,18 +139,6 @@ function initMap() {
             position: place.geometry.location,
             title: place.name,
         });
-        // Create a new info window for each place
-        var infowindow = new google.maps.InfoWindow({
-            content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].vicinity + '</p></div>'
-        });
-
-        // Add event listeners to show and hide info window
-        marker.addListener('mouseover', function () {
-            infowindow.open(map, this);
-        });
-        marker.addListener('mouseout', function () {
-            infowindow.close();
-        });
 
     }
 
@@ -147,9 +146,17 @@ function initMap() {
 
 //function to change the radius of the search and then call the initMap function
 function changeRadius() {
+    //check what the input of units is
+    var units = document.getElementById("units").value;
+    var ratio = 1;
+    if (units == "miles") {
+        ratio = 621.371;
+    } else if (units == "kilometers") {
+        ratio = 1000;
+    }
     var numTest = parseInt(document.getElementById("radius").value);
     if (Number.isInteger(numTest)) {
-        radius = document.getElementById("radius").value * 621.371;
+        radius = document.getElementById("radius").value * ratio;
         initMap();
     } else {
         alert("Input is not an integer");
