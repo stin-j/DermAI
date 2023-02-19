@@ -2,6 +2,7 @@ body {
     background: linear-gradient(to bottom, #00bfff, #ffffff);
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
+    height: 100vh;
 }
 
 .container {
