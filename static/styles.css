@@ -254,7 +254,7 @@ details p {
 }
 
 .tabs a:hover {
-  background: #006eff;
+  background: #60c0f9;
   border-radius: 20px;
   color: #000000;
 }
@@ -271,7 +271,7 @@ details p {
 }
 
 #upload-image {
-  background-color: #006eff;
+  background-color: #7dcbfb;
   color: #fff;
   border: none;
   padding: 10px 20px 10px 15px;
@@ -337,7 +337,7 @@ summary::marker {
 
 summary[role="button"]:focus,
 summary::marker {
-  color: darkblue;
+  color: rgb(10, 10, 149);
   font-weight: 800;
 }
 
