@@ -1,5 +1,5 @@
 body {
-    background-color: #1f1f1f;
+    background-color: #fbf7f7;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -10,8 +10,8 @@ body {
     max-width: 1200px;
     margin: 100px auto;
     padding: 20px;
-    background-color: #000000;
-    border: 2px solid #000000;
+    background-color: #1d1a1a;
+    border: 2px solid #453838;
     border-radius: 25px;
     box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #000000, 0 0 80px #000000, 0 0 90px #000000;
 }
