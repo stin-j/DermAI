@@ -162,21 +162,3 @@ input {
     color: #cccccc; /* Set the placeholder text color to white gray */
   }
   
-/* creating a disclosure button format*/
-div {max-width: 30rem;min-width:10rem}
-summary[role=button] {
-  background-color: #000;
-  color: #fff;
-  padding: 1rem;
-  font-weight: bold;
-  cursor: pointer
-}
-/* work on hover and focus to have different colors */
-summary[role=button]:hover,
-summary[role=button]:focus,
-summary::marker {color: #0f0}
-details {
-  border: 1px solid #000;
-  margin-bottom: 0.25rem
-}
-details p {padding: 0 1rem}
