@@ -73,9 +73,9 @@ function initMap() {
 
     // Define the info window
     var contentString = '<div id="content">' +
-        '<h2 id="firstHeading" class="firstHeading">'+marker.title+'</h2>' +
+        '<h2 id="firstHeading" class="firstHeading">' + marker.title + '</h2>' +
         '<div id="bodyContent">' +
-        '<span>Additional information about the marker.</span>' +
+        '<span>This is your current location.</span>' +
         '</div>' +
         '</div>';
 
@@ -93,6 +93,9 @@ function initMap() {
     marker.addListener('mouseout', function () {
         infowindow.close();
     });
+
+
+    //===========SEARCH==============
 
     // Create a new Places Service instance
     var service = new google.maps.places.PlacesService(map);
@@ -113,6 +116,7 @@ function initMap() {
             // Loop through the results and create a marker for each one
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
+                
             }
         }
     }
@@ -122,8 +126,21 @@ function initMap() {
         var marker = new google.maps.Marker({
             map: map,
             position: place.geometry.location,
-            title: place.name
+            title: place.name,
         });
+        // Create a new info window for each place
+        var infowindow = new google.maps.InfoWindow({
+            content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].vicinity + '</p></div>'
+        });
+
+        // Add event listeners to show and hide info window
+        marker.addListener('mouseover', function () {
+            infowindow.open(map, this);
+        });
+        marker.addListener('mouseout', function () {
+            infowindow.close();
+        });
+
     }
 
 }
