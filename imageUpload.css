@@ -3,7 +3,9 @@ body {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
-
+.logo h1{
+    font-size: 24px;
+}
 .button {
     display: inline-block;
     text-align: center;
@@ -76,3 +78,11 @@ body {
     display: block;
   }
   
+  .fancy-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6;
+    letter-spacing: 2px;
+    /*text-transform: uppercase;*/
+}
