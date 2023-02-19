@@ -8,43 +8,59 @@
 </head>
 
 <body onload="">
-    <button>Button 1</button>
-    <button>Button 2</button>
-    <button>Button 3</button>
-    <h1>DermAI</h1>
-    <p>Skin cancer detector</p>
-    <p>This AI will be able to detect different types of skin cancer seen below. This AI is simple that it can take an
-    </p>
-    <h2>Find a Dermatologist</h2>
-    <!--input field to change radius of search-->
-    <input type="text" id="radius" placeholder="Radius (miles)">
-    <button onclick="changeRadius()">Search</button>
-    <p id="demo">location</p>
-    <div id="map"></div>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA5RDpdew7bpNOC6G64xMOB6Pbk8xbuSU&callback=initMap&libraries=places"
-        async defer></script>
-    <li style="font-family:helvetica; color:blue"></li> Acne Rosea 
-    <img id="image"
-        src="https://cdn.shopify.com/s/files/1/2028/2057/articles/Evidence-Based_d00409dd-bf37-42e9-80fa-b89e1addbabd_300x300.jpg?v=1620379357" />
-    <p>
-        <right>Our AI will be able to detect Acne Rosea as shown in the above photo</right>
-    </p>
-    <li style="font-family:helvetica; color:blue"></li> Acne Vascular
-    <img id="image"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyogenic_Granuloma_Thumb_1.JPG/220px-Pyogenic_Granuloma_Thumb_1.JPG" />
-    <p>
-        <right>Our AI will be able to detect Acne Vascular tumors as shown in the above photo</right>
-    </p>
-    <li style="font-family:helvetica; color:blue"></li> Melanoma
-    <img id="image"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Melanoma.jpg/300px-Melanoma.jpg" />
-    <p>
-        <right>Our AI will be able to detect Melanoma as shown in the above photo</right>
-    </p>
-</body>
-</ul>
+    <button>Stevie</button>
+    <button>is</button>
+    <button>short</button>
 
-</body>
+    <div class="container">
+        <h1 class="fancy-text">DermAI</h1>
+    </div>
+    <div class="container">
+        <p>Skin cancer detector</p>
+        <p>This AI will be able to detect different types of skin cancer seen below. This AI is simple that it can take
+            an
+        </p>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="imageUpload">Choose an image to upload:</label>
+            <input type="file" name="imageUpload" id="imageUpload"><br>
+            <input type="submit" value="Upload Image">
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Find a Dermatologist</h2>
+        <!--input field to change radius of search-->
+        <input type="text" id="radius" placeholder="Radius (miles)">
+        <button onclick="changeRadius()">Search</button>
+        <p id="demo">location</p>
+        <div id="map"></div>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA5RDpdew7bpNOC6G64xMOB6Pbk8xbuSU&callback=initMap&libraries=places"
+            async defer></script>
+    </div>
+
+    <div class="container">
+        <li style="font-family:helvetica; color:blue"></li> Acne Rosea
+        <img id="image"
+            src="https://cdn.shopify.com/s/files/1/2028/2057/articles/Evidence-Based_d00409dd-bf37-42e9-80fa-b89e1addbabd_300x300.jpg?v=1620379357" />
+        <p>
+            <right>Our AI will be able to detect Acne Rosea as shown in the above photo</right>
+        </p>
+        <li style="font-family:helvetica; color:blue"></li> Acne Vascular
+        <img id="image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyogenic_Granuloma_Thumb_1.JPG/220px-Pyogenic_Granuloma_Thumb_1.JPG" />
+        <p>
+            <right>Our AI will be able to detect Acne Vascular tumors as shown in the above photo</right>
+        </p>
+        <li style="font-family:helvetica; color:blue"></li> Melanoma
+        <img id="image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Melanoma.jpg/300px-Melanoma.jpg" />
+        <p>
+            <right>Our AI will be able to detect Melanoma as shown in the above photo</right>
+        </p>
+        </ul>
+    </div>
+    </body>
 
 </html>
