@@ -16,7 +16,7 @@
         </div>
         <div class="tab-container">
             <ul class="tabs">
-                <li><a href="">Upload Image</a></li>
+                <li><a href="home">Home</a></li>
                 <li><a href="findDermatologist">Find a Dermatologist</a></li>
                 <li><a href="diseaseTypes">Supported Skin Diseases</a></li>
             </ul>
@@ -38,25 +38,36 @@
     <div class="container">
         <div id="result1">
             <h1>Disease category: <span id="cat1"></span></h1>
-            <h2 id="name">Name: <span id="name1"></span></h2>
-            <h3>Probability: <span id="prob1"></span></h3>
+            <h2 id="name">Disease name:  <span id="name1"></span></h2>
+            <h3>Category probability: <span id="prob1"></span></h3>
+            <h3>Disease probability: <span id="d_prob1"></span></h3>
             <p id="shortDescription">Description: <span id="desc1"></span></p>
             <img id="image1" src="" />
-            <a id="link1" href="">Link</a>
+            <a id="link1" href="">Click to learn more</a>
         </div>
     </div>
     <!-- make second container for result2-->
     <div class="container">
         <div id="result2">
             <h1>Disease category: <span id="cat2"></span></h1>
-            <h2 id="name">Name: <span id="name2"></span></h2>
-            <h3>Probability: <span id="prob2"></span></h3>
+            <h2 id="name">Disease name:  <span id="name2"></span></h2>
+            <h3>Category probability: <span id="prob2"></span></h3>
+            <h3>Disease probability: <span id="d_prob2"></span></h3>
             <p id="shortDescription">Description: <span id="desc2"></span></p>
             <img id="image2" src="" />
-            <a id="link2" href="">Link</a>
+            <a id="link2" href="">Click to learn more</a>
         </div>
 
         <script>
+            disease_types = ['Benign (noncancerous) lesion', 'Precancerous or cancerous lesion', 'Vascular lesion']
+            specific_types = [
+                ['atypical nevi', 'becker nevus',
+                    'unclassified benign skin lesion', 'blue nevus',
+                    'congenital nevus', 'dermatofibroma', 'halo-nevus', 'melanocytic nevi'],
+                ['basal cell carcinoma', 'Bowen\'s disease', 'melanoma'],
+                ['angiokeratomas', 'angiomas', 'kaposi sarcoma', 'pyogenic granulomas', 'telangiectasias',
+                    'unclassified vascular lesion', 'venous malformation']]
+
             const predictButton = document.getElementById("predictButton");
             const fileInput = document.getElementById("image-input");
             const result = document.getElementById("shortDescription");
@@ -71,51 +82,42 @@
                     body: formData,
                 })
                     .then((response) => response.json())
-                    .then((data) => {
+                    .then(async (data) => {
+                        console.log(data);
                         const cat1 = document.getElementById("cat1");
                         const name1 = document.getElementById("name1");
                         const desc1 = document.getElementById("desc1");
                         const prob1 = document.getElementById("prob1");
+                        const d_prob1 = document.getElementById("d_prob1");
                         const image1 = document.getElementById("image1");
                         const link1 = document.getElementById("link1");
                         const cat2 = document.getElementById("cat2");
                         const name2 = document.getElementById("name2");
                         const desc2 = document.getElementById("desc2");
                         const prob2 = document.getElementById("prob2");
+                        const d_prob2 = document.getElementById("d_prob2");
                         const image2 = document.getElementById("image2");
                         const link2 = document.getElementById("link2");
                         let jsonData;
-                        fetch('../static/dataset.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                jsonData = data
-                            })
-                            .catch(error => {
-                                console.error('Error fetching the JSON file:', error);
-                            });
+                        response = await fetch('../static/dataset.json');
+                        jsonData = await response.json();
 
-                        cat1.innerHTML = data.category;
-                        name1.innerHTML = data.disease;
-                        // get short description from dataset.json
-                        desc1.innerHTML = jsonData.diseases.Categories.
+                        cat1.innerHTML = disease_types[data.category];
+                        name1.innerHTML = specific_types[data.category][data.disease];
+                        desc1.innerHTML = jsonData.categories[data.category][data.disease].paragraph;
+                        prob1.innerHTML = data.probability;
+                        d_prob1.innerHTML = data.disease_prob;
+                        image1.src = "../static/" + jsonData.categories[data.category][data.disease].images;
+                        link1.href = jsonData.categories[data.category][data.disease].link;
 
-                        prob1.innerHTML = data.disease_prob;
 
-                        ;
-                        image1.src = data.image;
-                        link1.href = data.link;
-
-                        cat2.innerHTML = data.category2;
-                        name2.innerHTML = data.disease2;
-                        prob2.innerHTML = data.d2_prob;
-                        desc2.innerHTML = data.description2;
-                        image2.src = data.image2;
-                        link2.href = data.link2;
-
-                        console.log(data);
-                        result.innerHTML = `Most predicted disease type: ${data.category}, Probability: ${data.probability}, Specific disease: ${data.disease}, Probability: ${data.disease_prob},
-              Second-most predicted disease type: ${data.category2}, Probability: ${data.c2_prob}, Specific disease: ${data.disease2}, Probability: ${data.d2_prob},`;
-
+                        cat2.innerHTML = disease_types[data.category2];
+                        name2.innerHTML = specific_types[data.category2][data.disease2];
+                        desc2.innerHTML = jsonData.categories[data.category2][data.disease2].paragraph;
+                        prob2.innerHTML = data.c2_prob;
+                        d_prob2.innerHTML = data.d2_prob;
+                        image2.src = "../static/" + jsonData.categories[data.category2][data.disease2].images;
+                        link2.href = jsonData.categories[data.category2][data.disease2].link;
 
                     })
                     .catch((error) => {
