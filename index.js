@@ -73,9 +73,9 @@ function initMap() {
 
     // Define the info window
     var contentString = '<div id="content">' +
-        '<h2 id="firstHeading" class="firstHeading">'+marker.title+'</h2>' +
+        '<h2 id="firstHeading" class="firstHeading">' + marker.title + '</h2>' +
         '<div id="bodyContent">' +
-        '<span>Additional information about the marker.</span>' +
+        '<span>This is your current location.</span>' +
         '</div>' +
         '</div>';
 
@@ -93,6 +93,9 @@ function initMap() {
     marker.addListener('mouseout', function () {
         infowindow.close();
     });
+
+
+    //===========SEARCH==============
 
     // Create a new Places Service instance
     var service = new google.maps.places.PlacesService(map);
@@ -112,27 +115,52 @@ function initMap() {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             // Loop through the results and create a marker for each one
             for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
+                createMarker(results[i], results, i);
+
             }
         }
     }
 
     // Create a marker for a place
-    function createMarker(place) {
+    function createMarker(place, results, i) {
+        //console.log(results);
         var marker = new google.maps.Marker({
             map: map,
             position: place.geometry.location,
-            title: place.name
+            title: place.name,
+
         });
+
+        // Create a new info window for each place
+        var infowindow = new google.maps.InfoWindow({
+            content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].formatted_address + '</p></div>'
+        });
+
+        // Add event listeners to show and hide info window
+        marker.addListener('mouseover', function () {
+            infowindow.open(map, this);
+        });
+        marker.addListener('mouseout', function () {
+            infowindow.close();
+        });
+
     }
 
 }
 
 //function to change the radius of the search and then call the initMap function
 function changeRadius() {
+    //check what the input of units is
+    var units = document.getElementById("units").value;
+    var ratio = 1;
+    if (units == "miles") {
+        ratio = 621.371;
+    } else if (units == "kilometers") {
+        ratio = 1000;
+    }
     var numTest = parseInt(document.getElementById("radius").value);
     if (Number.isInteger(numTest)) {
-        radius = document.getElementById("radius").value * 621.371;
+        radius = document.getElementById("radius").value * ratio;
         initMap();
     } else {
         alert("Input is not an integer");
