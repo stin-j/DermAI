@@ -228,13 +228,12 @@ details p {
     text-decoration: none;
     color: #ffffff;
     text-shadow: 0 0 10px #000000;
-    transition: text-shadow 0.1s ease-in-out, border-bottom 0.1s ease-in;
+    transition: text-shadow 0.1s ease-in-out;
 
   }
   
   .tabs a:hover {
     text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
   }
   
   .tab-content {
