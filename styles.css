@@ -2,32 +2,33 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
     max-width: 1200px;
+    text-align: center;
     margin: 100px auto;
     padding: 20px;
     background-color: #1d1a1a;
-    border: 5px solid #f39c12;
+    border: 5px solid #2596be;
     border-radius: 25px;
     box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #000000, 0 0 80px #000000, 0 0 90px #000000;
 }
 
 h1 {
+    display: flex;
     font-size: 4rem;
     font-weight: 700;
     margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
     font-family: Montserrat;
-    max-width: 15ch;
+    justify-content: center;
 }
 
 h2 {
-    color:black;
+    display: flex;
+    color: black;
     font-size: 2rem;
     font-weight: 700;
     margin-top: 20px;
@@ -37,11 +38,6 @@ h2 {
     max-width: 15ch;
 }
 
-@keyframes gradient-animation {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 0; }
-  }
-
 p {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -49,17 +45,17 @@ p {
     text-align: justify;
 }
 
-span{
+span {
     color: #000000;
     font-weight: 700;
     text-align: center;
 }
 
 .btn {
-    background-color: #f39c12;
+    background-color: #2596be;
     border-radius: 5px;
     color: #ffffff;
-    display: block;
+    display: flex;
     font-size: auto;
     font-weight: 700;
     margin: 0 auto;
@@ -73,13 +69,78 @@ span{
 
 .btn:hover {
     background-color: #ffffff;
-    color: #f39c12;
+    color: #2596be;
 }
 
+.button {
+    display:inline-block;
+    text-align: center;
+    width: auto;
+    margin: 5px auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00bfff; /* Set the background color to light blue */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 191, 255, 0.5); /* Create an inside glow effect */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #ffffff; /* Change the background color on hover for a subtle effect */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.7); /* Adjust the glow effect on hover */
+    color: #00bfff;
+  }
+
+  
 #map {
-    height: 400px;
+    height: 500px;
     width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
 }
+
+.search {
+    display: inline-block;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.fancy-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6;
+    letter-spacing: 2px;
+    /*text-transform: uppercase;*/
+}
+
+.heading {
+
+    font-family: 'Montserrat', sans-serif;
+    /* A popular futuristic font */
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff;
+    padding: 2rem 0;
+    border-top: 1px solid #00ffff;
+    border-bottom: 1px solid #00ffff;
+
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+}
+
 /* creating a disclosure button format*/
 div {max-width: 30rem;min-width:10rem}
 summary[role=button] {

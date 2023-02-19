@@ -13,34 +13,42 @@
 <body onload="">
     <div class="container">
         <h1 class="fancy-text">DermAI</h1>
+        <img src="logo.png" alt="DermAI Logo" width="200" height="200" class="logo">
+
     </div>
 
     <!-- Upload Image-->
     <div class="container">
-        <p>Skin cancer detector</p>
-        <p>This AI will be able to detect different types of skin cancer seen below. This AI is simple that it can take
-            an
-        </p>
+        <div id="shortDescription">
+            <!-- pull data from dataset.json for name, short paragraph, image, and link -->
+            <h2 id="name"></h2>
+            <p id="shortDescription"></p>
+            <img id="image" src="" />
+            <a id="link" href="">Link</a>
+
+        </div>
 
         <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="imageUpload"> class = "btn">Choose an image to upload:</label>
-            <input type="file" name="imageUpload" id="imageUpload"><br>
+            <label for="imageUpload" class="button">Choose an image to upload</label>
+            <br>
         </form>
     </div>
 
-    <!--Finding a Dermatologist with User Input Distance-->
+
     <div class="container">
-        <h2>Find a Dermatologist Near You</h2>
-        <!--input field to change radius of search-->
-        <input type="text" id="radius" placeholder="Radius">
-        <!--dropdown for miles or km-->
-        <select name="units" id="units">
-            <option value="miles">Miles</option>
-            <option value="kilometers">Kilometers</option>
-        </select>
-        <!--search button-->
-        <button onclick="changeRadius()" class = "btn">Search</button>
-        <p id="demo">location</p>
+        <h1 class="heading">Find a Dermatologist Near You</h1>
+        <div class="search"> <!--search bar-->
+            <!--input field to change radius of search-->
+            <input type="text" id="radius" placeholder="Radius">
+            <!--dropdown for miles or km-->
+            <select name="units" id="units">
+                <option value="miles">Miles</option>
+                <option value="kilometers">Kilometers</option>
+            </select>
+            <!--search button-->
+            <button onclick="changeRadius()" class="button" style="margin-left: 10px">Search</button>
+        </div>
+        <!--<p id="demo">location</p>-->
         <div id="map"></div>
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA5RDpdew7bpNOC6G64xMOB6Pbk8xbuSU&callback=initMap&libraries=places"
@@ -272,6 +280,6 @@
             </p>
         </details>      
     </div>
-    </body>
+</body>
 
 </html>
