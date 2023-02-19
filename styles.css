@@ -2,8 +2,6 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -24,10 +22,11 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
     font-family: Montserrat;
-    max-width: 15ch;
+    justify-content: center;
 }
 
 h2{
+    display:flex;
     color:black;
     font-size: 2rem;
     font-weight: 700;
@@ -60,7 +59,7 @@ span{
     background-color: #2596be;
     border-radius: 5px;
     color: #ffffff;
-    display: block;
+    display: flex;
     font-size: auto;
     font-weight: 700;
     margin: 0 auto;
@@ -82,4 +81,11 @@ span{
     width: 100%;
     border: 2px solid white;
     border-radius: 5px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
 }
