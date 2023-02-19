@@ -62,7 +62,7 @@ function initMap() {
         size: new google.maps.Size(32, 32), // Size of the custom icon image
         origin: new google.maps.Point(0, 0), // Position of the custom icon image relative to the top-left corner of the icon image
         anchor: new google.maps.Point(16, 32) // Position of the anchor point on the marker image (where the marker's position is located relative to the icon)
-      };
+    };
 
     var marker = new google.maps.Marker({
         position: { lat: latitude, lng: longitude },
@@ -70,6 +70,32 @@ function initMap() {
         map: map,
         title: 'Current Location'
     });
+
+    // Define the info window
+    var contentString = '<div id="content">' +
+        '<h2 id="firstHeading" class="firstHeading">' + marker.title + '</h2>' +
+        '<div id="bodyContent">' +
+        '<span>This is your current location.</span>' +
+        '</div>' +
+        '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+
+    // Add event listener to show info window on mouseover
+    marker.addListener('mouseover', function () {
+        infowindow.open(map, marker);
+    });
+
+    // Add event listener to hide info window on mouseout
+    marker.addListener('mouseout', function () {
+        infowindow.close();
+    });
+
+
+    //===========SEARCH==============
 
     // Create a new Places Service instance
     var service = new google.maps.places.PlacesService(map);
@@ -90,6 +116,18 @@ function initMap() {
             // Loop through the results and create a marker for each one
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
+                // Create a new info window for each place
+                var infowindow = new google.maps.InfoWindow({
+                    content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].vicinity + '</p></div>'
+                });
+
+                // Add event listeners to show and hide info window
+                marker.addListener('mouseover', function () {
+                    infowindow.open(map, this);
+                });
+                marker.addListener('mouseout', function () {
+                    infowindow.close();
+                });
             }
         }
     }
@@ -99,17 +137,26 @@ function initMap() {
         var marker = new google.maps.Marker({
             map: map,
             position: place.geometry.location,
-            title: place.name
+            title: place.name,
         });
+
     }
 
 }
 
 //function to change the radius of the search and then call the initMap function
 function changeRadius() {
+    //check what the input of units is
+    var units = document.getElementById("units").value;
+    var ratio = 1;
+    if (units == "miles") {
+        ratio = 621.371;
+    } else if (units == "kilometers") {
+        ratio = 1000;
+    }
     var numTest = parseInt(document.getElementById("radius").value);
     if (Number.isInteger(numTest)) {
-        radius = document.getElementById("radius").value * 621.371;
+        radius = document.getElementById("radius").value * ratio;
         initMap();
     } else {
         alert("Input is not an integer");
