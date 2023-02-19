@@ -5,10 +5,10 @@ import numpy as np
 import os
 
 # Load trained model
-model = load_model('generalModel.h5')
-benign = load_model('benignModel.h5')
-cancerous = load_model('cancerousModel.h5')
-vascular = load_model('vascModel.h5')
+model = load_model('models/generalModel.h5')
+benign = load_model('models/benignModel.h5')
+cancerous = load_model('models/cancerousModel.h5')
+vascular = load_model('models/vascModel.h5')
 
 def preprocess_image(img_path):
     img = load_img(img_path, target_size=(224, 224))
@@ -53,118 +53,105 @@ def predict():
     genPrediction = model.predict(preprocess_image(image_path))
 
     # Get the predicted disease type and probability
-    disease_type = np.argmax(genPrediction)
-    genProbability = float(genPrediction[0][disease_type])
+    category = np.argmax(genPrediction)
+    genProbability = float(genPrediction[0][category])
 
     # Get the predicted disease type as a string
-    category = disease_types[disease_type]
-    if(category == 'Benign (noncancerous) lesion'):
+    if(category == 0):
         #run benign model
         benignPrediction = benign.predict(preprocess_image(image_path))
-        specific_disease_type = np.argmax(benignPrediction)
-        probability = float(benignPrediction[0][specific_disease_type])
-        specific_predicted_disease = benign_types[specific_disease_type]
-    elif(category == 'Precancerous or cancerous lesion'):
+        disease = np.argmax(benignPrediction)
+        probability = float(benignPrediction[0][disease])
+    elif(category == 1):
         #run cancerous model
         cancerousPrediction = cancerous.predict(preprocess_image(image_path))
-        specific_disease_type = np.argmax(cancerousPrediction)
-        probability = float(cancerousPrediction[0][specific_disease_type])
-        specific_predicted_disease = cancerous_types[specific_disease_type]
+        disease = np.argmax(cancerousPrediction)
+        probability = float(cancerousPrediction[0][disease])
     else:
         #run vascular model
         vascularPrediction = vascular.predict(preprocess_image(image_path))
-        specific_disease_type = np.argmax(vascularPrediction)
-        probability = float(vascularPrediction[0][specific_disease_type])
-        specific_predicted_disease = vascular_types[specific_disease_type]
+        disease = np.argmax(vascularPrediction)
+        probability = float(vascularPrediction[0][disease])
     
     if(genProbability < 0.6):
     #run the model for the next highest category if the probability is less than 60%
-        if(category == 'Benign (noncancerous) lesion'):
+        if(category == 0):
             #run next highest category from genPrediction
             if(genPrediction[0][1] > genPrediction[0][2]):
                 #run cancerous model
-                category2 = 'Precancerous or cancerous lesion'
+                category2 = 1
                 c2_prob = float(genPrediction[0][1])
                 cancerousPrediction = cancerous.predict(preprocess_image(image_path))
-                specific_disease_type = np.argmax(cancerousPrediction)
-                d2_prob = float(cancerousPrediction[0][specific_disease_type])
-                disease2 = cancerous_types[specific_disease_type]
+                disease_2 = np.argmax(cancerousPrediction)
+                d2_prob = float(cancerousPrediction[0][disease_2])
             else:
                 #run vascular model
-                category2 = 'Vascular lesion'
+                category2 = 2
                 c2_prob = float(genPrediction[0][2])
                 vascularPrediction = vascular.predict(preprocess_image(image_path))
-                specific_disease_type = np.argmax(vascularPrediction)
-                d2_prob = float(vascularPrediction[0][specific_disease_type])
-                disease2 = vascular_types[specific_disease_type]
-        elif(category == 'Precancerous or cancerous lesion'):
+                disease_2 = np.argmax(vascularPrediction)
+                d2_prob = float(vascularPrediction[0][disease_2])
+        elif(category == 1):
             #run next highest category from genPrediction
             if(genPrediction[0][0] > genPrediction[0][2]):
                 #run benign model
-                category2 = 'Benign (noncancerous) lesion'
+                category2 = 0
                 c2_prob = float(genPrediction[0][0])
                 benignPrediction = benign.predict(preprocess_image(image_path))
-                specific_disease_type = np.argmax(benignPrediction)
-                d2_prob = float(benignPrediction[0][specific_disease_type])
-                disease2 = benign_types[specific_disease_type]
+                disease_2 = np.argmax(benignPrediction)
+                d2_prob = float(benignPrediction[0][disease_2])
             else:
                 #run vascular model
-                category2 = 'Vascular lesion'
+                category2 = 2
                 c2_prob = float(genPrediction[0][2])
                 vascularPrediction = vascular.predict(preprocess_image(image_path))
-                specific_disease_type = np.argmax(vascularPrediction)
-                d2_prob = float(vascularPrediction[0][specific_disease_type])
-                disease2 = vascular_types[specific_disease_type]
+                disease_2 = np.argmax(vascularPrediction)
+                d2_prob = float(vascularPrediction[0][disease_2])
         else:
             #run next highest category from genPrediction
             if(genPrediction[0][0] > genPrediction[0][1]):
                 #run benign model
-                category2 = 'Benign (noncancerous) lesion'
+                category2 = 0
                 c2_prob = float(genPrediction[0][0])
                 benignPrediction = benign.predict(preprocess_image(image_path))
-                specific_disease_type = np.argmax(benignPrediction)
-                d2_prob = float(benignPrediction[0][specific_disease_type])
-                disease2 = benign_types[specific_disease_type]
+                disease_2 = np.argmax(benignPrediction)
+                d2_prob = float(benignPrediction[0][disease_2])
             else:
                 #run cancerous model
-                category2 = 'Precancerous or cancerous lesion'
+                category2 = 1
                 c2_prob = float(genPrediction[0][1])
                 cancerousPrediction = cancerous.predict(preprocess_image(image_path))
-                specific_disease_type = np.argmax(cancerousPrediction)
-                d2_prob = float(cancerousPrediction[0][specific_disease_type])
-                disease2 = cancerous_types[specific_disease_type]
+                disease_2 = np.argmax(cancerousPrediction)
+                d2_prob = float(cancerousPrediction[0][disease_2])
     else:
         #if the probability is greater than 60%, set the second category to the same as the first and choose the next highest disease type
         category2 = category
         c2_prob = genProbability
         #find the next highest disease in the array of the original prediciton
-        if(category == 'Benign (noncancerous) lesion'):
+        if(category == 0):
             #find second highest max in benignPrediction
-            secondHighestType = np.argpartition(benignPrediction[0], -2)[-2]
-            disease2 = benign_types[secondHighestType]
-            d2_prob = float(benignPrediction[0][secondHighestType])
-        elif(category == 'Precancerous or cancerous lesion'):
+            disease_2 = np.argpartition(benignPrediction[0], -2)[-2]
+            d2_prob = float(benignPrediction[0][disease_2])
+        elif(category == 1):
             #find second highest max in cancerousPrediction
-            secondHighestType = np.argpartition(cancerousPrediction[0], -2)[-2]
-            disease2 = cancerous_types[secondHighestType]
-            d2_prob = float(cancerousPrediction[0][secondHighestType])
+            disease_2 = np.argpartition(cancerousPrediction[0], -2)[-2]
+            d2_prob = float(cancerousPrediction[0][disease_2])
         else:
             #find second highest max in vascularPrediction
-            secondHighestType = np.argpartition(vascularPrediction[0], -2)[-2]
-            disease2 = vascular_types[secondHighestType]
-            d2_prob = float(vascularPrediction[0][secondHighestType])
+            disease_2 = np.argpartition(vascularPrediction[0], -2)[-2]
+            d2_prob = float(vascularPrediction[0][disease_2])
 
 
 
     # Render the result template with the predicted disease type and probability
     return jsonify({
-        'category': category,
+        'category': int(category),
         'probability': genProbability,
-        'disease': specific_predicted_disease,
+        'disease': int(disease),
         'disease_prob': probability,
-        'category2': category2,
+        'category2': int(category2),
         'c2_prob': c2_prob,
-        'disease2': disease2,
+        'disease2': int(disease_2),
         'd2_prob': d2_prob
     })
 if __name__ == '__main__':
