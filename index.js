@@ -123,17 +123,17 @@ function initMap() {
 
     // Create a marker for a place
     function createMarker(place, results, i) {
+        //console.log(results);
         var marker = new google.maps.Marker({
             map: map,
             position: place.geometry.location,
             title: place.name,
-
             
         });
 
         // Create a new info window for each place
         var infowindow = new google.maps.InfoWindow({
-            content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].vicinity + '</p></div>'
+            content: '<div style="color: black;"><h3>' + results[i].name + '</h3><p>' + results[i].formatted_address + '</p></div>'
         });
 
         // Add event listeners to show and hide info window
