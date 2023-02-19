@@ -29,6 +29,17 @@ vascular_types = ['angiokeratomas', 'angiomas', 'kaposi sarcoma', 'pyogenic gran
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route("/diseaseTypes", methods=["GET", "POST"])
+def diseaseTypes():
+    return render_template('diseaseTypes.html')
+
+@app.route("/findDermatologist", methods=["GET", "POST"])
+def findDermatologist():
+    return render_template('findDermatologist.html')
+@app.route("/home", methods=["GET", "POST"])
+def home():
+    return render_template('index.html')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
