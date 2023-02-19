@@ -137,9 +137,8 @@ function initMap() {
         var marker = new google.maps.Marker({
             map: map,
             position: place.geometry.location,
-            title: place.name,
+            title: place.name
         });
-
     }
 
 }
@@ -147,19 +146,16 @@ function initMap() {
 //function to change the radius of the search and then call the initMap function
 function changeRadius() {
     //check what the input of units is
+    var numValid = parseInt(document.getElementById("radius").value);
     var units = document.getElementById("units").value;
-    var ratio = 1;
-    if (units == "miles") {
-        ratio = 621.371;
-    } else if (units == "kilometers") {
-        ratio = 1000;
-    }
-    var numTest = parseInt(document.getElementById("radius").value);
-    if (Number.isInteger(numTest)) {
-        radius = document.getElementById("radius").value * ratio;
+    if (Number.isInteger(numValid)) {
+        if (units == "miles") {
+            radius = document.getElementById("radius").value * 621.371; // miles from meters
+        } else if (units == "kilometers") {
+            radius = document.getElementById("radius").value * 1000; // kilometers from meters
+        }
         initMap();
     } else {
         alert("Input is not an integer");
     }
-
 }
