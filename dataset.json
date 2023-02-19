@@ -54,19 +54,15 @@
                 },
                 "Melanotic Macule": {
                     "images": "types/Melanoma Skin Cancer Nevi and Moles/melanotic-macule-4.jpg",
-                    "paragraph": "",
-                    "link for more info": ""
+                    "paragraph": "A melanotic macule, also known as a labial lentigo or a mucosal melanotic macule, is a small, dark, flat spot that appears on the mucous membranes, including the lips, mouth, and genital area. It is a benign pigmented lesion that is caused by an increase in the number of melanocytes, the pigment-producing cells in the skin. Melanotic macules are often mistaken for other pigmented lesions, such as melanoma, which is a type of skin cancer. However, melanotic macules are typically smaller, have a well-defined border, and a uniform color, while melanomas are usually larger, have irregular borders, and variable colors.Although melanotic macules are benign, any pigmented lesion on the mucous membranes should be evaluated by a dermatologist to rule out the possibility of melanoma or other types of skin cancer. If the lesion is determined to be benign, no treatment is necessary. However, if the lesion is causing cosmetic concerns, it can be removed through cryotherapy or laser treatment.",
+                    "link for more info": "https://dermnetnz.org/topics/labial-melanotic-macule"
                 },
                 "Mongolian Spot": {
-                    "images": "",
-                    "paragraph": "",
+                    "images": "types/Melanoma Skin Cancer Nevi and Moles/mongolian-spot-2.jpg",
+                    "paragraph": "A Mongolian spot, also known as congenital dermal melanocytosis, is a type of pigmented birthmark that appears as a flat, blue-gray, or blue-black patch of skin. It is a benign condition that is caused by an accumulation of melanocytes, the pigment-producing cells in the skin.Mongolian spots are most commonly seen in individuals with darker skin tones, including people of Asian, African, Hispanic, and Native American descent. They are usually present at birth or appear within the first few weeks of life, and may be found on the lower back, buttocks, and other areas of the body. Mongolian spots typically fade on their own over time, with most disappearing by the age of 5 or 6 years old.Mongolian spots are harmless and do not require treatment, but they can be a cosmetic concern. In rare cases, they may be mistaken for bruises or other types of pigmented lesions, so it is important to have any unusual skin changes evaluated by a healthcare provider.",
                     "link for more info": ""
                 },
-                "Nevus Repigmented": {
-                    "images": "",
-                    "paragraph": "",
-                    "link for more info": ""
-                },
+                
                 "Nevus Spilus": {
                     "images": "",
                     "paragraph": "",
