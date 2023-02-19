@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    display:flex;
+    display: flex;
     font-size: 4rem;
     font-weight: 700;
     margin-top: 50px;
@@ -25,9 +25,9 @@ h1 {
     justify-content: center;
 }
 
-h2{
-    display:flex;
-    color:black;
+h2 {
+    display: flex;
+    color: black;
     font-size: 2rem;
     font-weight: 700;
     margin-top: 20px;
@@ -44,7 +44,7 @@ p {
     text-align: justify;
 }
 
-span{
+span {
     color: #000000;
     font-weight: 700;
     text-align: center;
@@ -78,7 +78,7 @@ span{
     border-radius: 5px;
 }
 
-.search{
+.search {
     display: flex;
     justify-content: center;
     margin: 20px auto;
@@ -86,12 +86,17 @@ span{
 }
 
 .fancy-text {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 10rem; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 10rem;
     color: #ffffff;
-    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6; /* Create a glowing effect with multiple shadows */
+    text-shadow: 0 0 10px #000000, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00e6e6, 0 0 70px #00e6e6, 0 0 80px #00e6e6, 0 0 100px #00e6e6;
     letter-spacing: 2px;
-    text-transform: uppercase; 
-  }
-  
-  
+    /*text-transform: uppercase;*/
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+}
