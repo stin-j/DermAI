@@ -1,5 +1,20 @@
 window.addEventListener('load', initMap);
 
+function upload() {
+    // trigger the file selection dialog box
+    document.getElementById('image-input').click();
+    
+    // handle the file selection
+    document.getElementById('image-input').onchange = (event) => {
+      const file = event.target.files[0];
+      console.log('Selected file:', file);
+      
+      // do something with the selected file, such as upload it to a server
+      // using XMLHttpRequest or fetch
+    };
+  }
+  
+
 
 var latitude = 0, longitude = 0;
 var radius = 5000;

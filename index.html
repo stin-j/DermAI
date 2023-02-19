@@ -25,8 +25,9 @@
 
     <div class="top-container">
         <div>
-            <input type="file" id="image-input">
-            <button id="upload-image">Upload</button>
+
+            <input type="file" style="display:none" id="image-input">
+            <button id="upload-image" onclick="upload()" type="uploadFile">Upload</button>
         </div>
 
 
@@ -45,42 +46,6 @@
         </div>
     </div>
 
-
-    <!-- <div>
-        <form action="upload.php" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" id="file-input" />
-            <button onclick="uploadFile()">Upload File</button>
-            <script>
-                function uploadFile() {
-                    const fileInput = document.getElementById('file-input');
-                    const file = fileInput.files[0];
-
-                    if (!file) {
-                        console.error('No file selected.');
-                        return;
-                    }
-
-                    const reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = function () {
-                        const img = new Image();
-                        img.src = reader.result;
-
-                        img.onload = function () {
-                            const canvas = document.createElement('canvas');
-                            canvas.width = img.width;
-                            canvas.height = img.height;
-                            const ctx = canvas.getContext('2d');
-                            ctx.drawImage(img, 0, 0);
-
-                            const jpegFile = canvas.toDataURL('image/jpg');
-                            console.log(jpgFile);
-                        };
-                    };
-                }
-            </script>
-        </form>
-    </div> -->
 
 </body>
 
